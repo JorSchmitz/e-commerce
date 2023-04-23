@@ -3,6 +3,26 @@
   padding: 10px;
 }
 
+.product-info__img img {
+  max-height: 400px;
+  object-fit: contain;
+}
+
+@media (min-width: 700px) {
+  .product-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .product-info__img {
+    width: 50%;
+  }
+
+  .product-info__info {
+    width: 50%;
+  }
+}
+
 .product-info__footer {
   display: flex;
   flex-wrap: wrap;

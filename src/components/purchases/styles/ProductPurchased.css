@@ -1,0 +1,36 @@
+.product__purchased {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.product__purchased-title {
+  width: 100%;
+  text-align: center;
+  font-weight: normal;
+}
+
+.product__purchased-quantity {
+  padding: 10px;
+  border: 1px solid var(--color-gray);
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .product__purchased-title {
+    width: 33%;
+    text-align: start;
+  }
+
+  .product__purchased {
+    border-bottom: none;
+    margin-left: 150px;
+  }
+
+  .product__purchased-price {
+    width: 33%;
+    text-align: end;
+  }
+}

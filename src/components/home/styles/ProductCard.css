@@ -17,6 +17,7 @@
 
 .product-card__header {
   height: 200px;
+  position: relative;
 }
 
 .product-card__header img {
@@ -24,6 +25,26 @@
   width: 100%;
   display: block;
   object-fit: contain;
+}
+
+.product-card__header-img1 {
+  transition: opacity 600ms ease;
+}
+
+.product-card__header-img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
+
+.product-card__header:hover .product-card__header-img2 {
+  opacity: 1;
+}
+
+.product-card__header:hover .product-card__header-img1 {
+  opacity: 0;
 }
 
 .product-card__title-price {

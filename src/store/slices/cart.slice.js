@@ -25,3 +25,39 @@ export const getAllCartProducts = () => (dispatch) => {
       console.log(err)
     })
 }
+
+export const addProductCart = (data) => (dispatch) => {
+  const URL = 'https://e-commerce-api.academlo.tech/api/v1/cart'
+  axios
+    .post(URL, data, getConfig())
+    .then((res) => {
+      console.log(res.data)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+}
+
+export const deleteProductCart = (id) => (dispatch) => {
+  const URL = `https://e-commerce-api.academlo.tech/api/v1/cart/${id}`
+  axios
+    .delete(URL, getConfig())
+    .then((res) => {
+      dispatch(getAllCartProducts())
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+}
+
+export const purchaseCart = (data) => (dispatch) => {
+  const URL = 'https://e-commerce-api.academlo.tech/api/v1/purchases'
+  axios
+    .post(URL, data, getConfig())
+    .then((res) => {
+      dispatch(setCartGlobal([]))
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+}

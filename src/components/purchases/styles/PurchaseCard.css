@@ -1,0 +1,23 @@
+.purchase__card {
+  border: 1px solid var(--color-gray);
+  padding: 10px;
+  border-radius: 12px;
+  color: #515151;
+  overflow: hidden;
+}
+
+.purchase__card-date {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+}
+
+.purchase__card-line {
+  width: 120%;
+  position: relative;
+  left: -20px;
+  color: var(--color-gray);
+}
+
+.purchase__card-list {
+  padding: 0 10px;
+}
